@@ -1,0 +1,21 @@
+
+// Set One - Full width
+.mirabella {
+
+    .page-item {
+
+        margin-right: $spacer / 4;
+        margin-left: $spacer / 4;
+
+        .page-link {
+            border-radius: $border-radius;
+        }
+
+        &:first-child {
+            margin-right: auto; // margin-inline-end
+        }
+        &:last-child {
+            margin-left: auto; // margin-inline-start
+        }
+    }
+}
