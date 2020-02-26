@@ -6,15 +6,15 @@
 // Color system
 
 $white:    #fff !default;
-$gray-100: rgb(249, 250, 251) !default;
-$gray-200: rgb(244, 246, 248) !default;
-$gray-300: rgb(223, 227, 232) !default;
-$gray-400: rgb(196, 205, 213) !default;
-$gray-500: rgb(145, 158, 171) !default;
-$gray-600: rgb(145, 158, 171) !default;
-$gray-700: rgb(99, 115, 129) !default;
-$gray-800: rgb(69, 79, 91) !default;
-$gray-900: rgb(33, 43, 54) !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -34,15 +34,15 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    rgb(0, 111, 187) !default;
-$indigo:  rgb(89, 104, 226) !default;
-$purple:  rgb(156, 106, 222) !default;
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     rgb(222, 54, 24) !default;
-$orange:  rgb(244, 147, 66) !default;
-$yellow:  rgb(238, 194, 0) !default;
-$green:   rgb(80, 184, 60) !default;
-$teal:    rgb(71, 193, 191) !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $colors: () !default;
@@ -66,10 +66,10 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $indigo !default;
+$primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          $teal !default;
+$info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
@@ -123,7 +123,7 @@ $enable-hover-media-query:                    false !default; // Deprecated, no 
 $enable-grid-classes:                         true !default;
 $enable-pointer-cursor-for-buttons:           true !default;
 $enable-print-styles:                         true !default;
-$enable-responsive-font-sizes:                true !default;
+$enable-responsive-font-sizes:                false !default;
 $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
@@ -168,7 +168,7 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $gray-200 !default;
+$body-bg:                   $white !default;
 $body-color:                $gray-900 !default;
 
 
@@ -278,7 +278,7 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -445,9 +445,9 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $rounded-pill !default;
-$btn-border-radius-lg:        $rounded-pill !default;
-$btn-border-radius-sm:        $rounded-pill !default;
+$btn-border-radius:           $border-radius !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius-sm:        $border-radius-sm !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -481,9 +481,9 @@ $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
-$input-border-radius:                   $rounded-pill !default;
-$input-border-radius-lg:                $rounded-pill !default;
-$input-border-radius-sm:                $rounded-pill !default;
+$input-border-radius:                   $border-radius !default;
+$input-border-radius-lg:                $border-radius-lg !default;
+$input-border-radius-sm:                $border-radius-sm !default;
 
 $input-focus-bg:                        $input-bg !default;
 $input-focus-border-color:              lighten($component-active-bg, 25%) !default;
@@ -735,19 +735,19 @@ $navbar-toggler-padding-x:          .75rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 
-$navbar-dark-color:                 rgba($white, .75) !default;
-$navbar-dark-hover-color:           rgba($white, 1) !default;
+$navbar-dark-color:                 rgba($white, .5) !default;
+$navbar-dark-hover-color:           rgba($white, .75) !default;
 $navbar-dark-active-color:          $white !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
-$navbar-light-color:                rgba($gray-900, .7) !default;
-$navbar-light-hover-color:          rgba($gray-900, 1) !default;
-$navbar-light-active-color:         rgba($primary, 1) !default;
-$navbar-light-disabled-color:       rgba($gray-900, .3) !default;
+$navbar-light-color:                rgba($black, .5) !default;
+$navbar-light-hover-color:          rgba($black, .7) !default;
+$navbar-light-active-color:         rgba($black, .9) !default;
+$navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-border-color: rgba($gray-900, .1) !default;
+$navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 $navbar-light-brand-color:                $navbar-light-active-color !default;
 $navbar-light-brand-hover-color:          $navbar-light-active-color !default;
