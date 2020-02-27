@@ -1,5 +1,14 @@
 
-// Set One - Full width
+.ly-5 {
+    padding-top: $spacer * 5;
+    padding-bottom: $spacer * 5;
+
+    ul {
+        margin-bottom: 0;
+    }
+}
+
+// mirabella Set - Full width
 .mirabella {
 
     .page-item {
@@ -9,6 +18,98 @@
 
         .page-link {
             border-radius: $border-radius;
+        }
+
+        &:first-child {
+            margin-right: auto; // margin-inline-end
+        }
+        &:last-child {
+            margin-left: auto; // margin-inline-start
+        }
+    }
+}
+
+// natale Set - Full width
+.natale {
+
+    .page-item {
+
+        margin-right: $spacer / 4;
+        margin-left: $spacer / 4;
+
+        .page-link {
+            border-radius: $rounded-pill;
+            padding: 0.5rem 0.85rem;
+        }
+
+        &:first-child {
+            margin-right: auto; // margin-inline-end
+        }
+        &:last-child {
+            margin-left: auto; // margin-inline-start
+        }
+    }
+}
+
+// Vicenza Set 
+.vicenza {
+
+    .page-item {
+        box-shadow: $box-shadow-sm;
+    }
+
+    .page-item:not(:first-child):not(:last-child) .page-link {
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+    .page-item:last-child .page-link {
+        border-left-color: transparent;
+    }
+    .page-item:first-child .page-link {
+        border-right-color: transparent;
+    }
+}
+
+// mirabella Set - Full width
+.idalia {
+
+    .page-item {
+
+        margin-right: $spacer / 4;
+        margin-left: $spacer / 4;
+
+        .page-link {
+            border-radius: $border-radius;
+            border-color: transparent;
+        }
+
+        &:first-child {
+            margin-right: auto; // margin-inline-end
+        }
+        &:last-child {
+            margin-left: auto; // margin-inline-start
+        }
+    }
+}
+
+// Rachele Set 
+.rachele {
+    
+    padding: $spacer / 4;
+
+    border-radius: $rounded-pill;
+    background-color: $pagination-bg;
+    border: $pagination-border-width solid $pagination-border-color;
+
+    .page-item {
+
+        margin-right: $spacer / 4;
+        margin-left: $spacer / 4;
+
+        .page-link {
+            border-radius: $rounded-pill;
+            padding: 0.5rem 0.85rem;
+            border-color: transparent;
         }
 
         &:first-child {
